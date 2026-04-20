@@ -5,11 +5,12 @@ workflows:
     environment:
       java: 17
     scripts:
-      - name: Generate Gradle Wrapper (if missing)
-        script: gradle wrapper
-      - name: Make gradlew executable
-        script: chmod +x gradlew
       - name: Build Android APK
-        script: ./gradlew assembleDebug
+        script: |
+          # If your files got pushed inside a CarMirror sub-folder, this moves into it
+          if [ -d "CarMirror" ]; then cd CarMirror; fi
+          
+          # Build using Codemagic's global Gradle (bypasses the wrapper completely)
+          gradle assembleDebug
     artifacts:
-      - app/build/outputs/apk/**/*.apk
+      - "**/*.apk"
