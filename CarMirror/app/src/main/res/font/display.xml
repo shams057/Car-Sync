@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-  Font references. In Android Studio:
-  1. Right-click res/font → New → Font resource file
-  2. Add your chosen fonts (e.g. SpaceGrotesk-Bold for display, JetBrainsMono for mono)
-  3. Update @font/display and @font/mono references in layouts.
-
-  Recommended free fonts (Google Fonts):
-   - Display: "Space Grotesk" (Bold 700)  → download and rename to display.ttf
-   - Mono:    "JetBrains Mono" (Regular)  → download and rename to mono.ttf
-
-  Place .ttf files in app/src/main/res/font/
--->
 <font-family xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <!-- Placeholder: replace with actual font entries once fonts are added -->
+
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/display_regular"
+        app:fontStyle="normal"
+        app:fontWeight="400"
+        app:font="@font/display_regular" />
+
 </font-family>
