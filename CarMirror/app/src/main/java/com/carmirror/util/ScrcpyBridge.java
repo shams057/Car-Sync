@@ -154,7 +154,11 @@ public class ScrcpyBridge {
         running = true;
 
         // Forward scrcpy socket port
-        runAdb("-s", target, "forward", "tcp:" + SCRCPY_PORT, "localabstract:scrcpy");
+        try {
+    runAdb("-s", target, "forward", "tcp:" + SCRCPY_PORT, "localabstract:scrcpy");
+} catch (InterruptedException e) {
+    e.printStackTrace();
+}
 
         // Launch server on device via adb shell
         List<String> shellCmd = new ArrayList<>();
