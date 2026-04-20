@@ -1,0 +1,15 @@
+workflows:
+  android-build:
+    name: Build Android APK
+    instance_type: mac_mini_m1
+    environment:
+      java: 17
+    scripts:
+      - name: Generate Gradle Wrapper (if missing)
+        script: gradle wrapper
+      - name: Make gradlew executable
+        script: chmod +x gradlew
+      - name: Build Android APK
+        script: ./gradlew assembleDebug
+    artifacts:
+      - app/build/outputs/apk/**/*.apk
