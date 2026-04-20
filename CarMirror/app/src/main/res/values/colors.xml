@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Core palette: dark automotive theme -->
+    <color name="bg_primary">#0D0E11</color>
+    <color name="bg_secondary">#13151A</color>
+    <color name="card_bg">#1A1C23</color>
+    <color name="card_bg_hover">#20222B</color>
+    <color name="hud_bg">#CC0D0E11</color>
+
+    <!-- Text -->
+    <color name="text_primary">#F0F1F4</color>
+    <color name="text_secondary">#9BA1B0</color>
+    <color name="text_muted">#5C6070</color>
+
+    <!-- Accents -->
+    <color name="accent_blue">#4D9EFF</color>
+    <color name="accent_blue_dim">#1A3A66</color>
+    <color name="accent_green">#3DD68C</color>
+    <color name="accent_green_dim">#0E3D26</color>
+    <color name="accent_amber">#F5A623</color>
+
+    <!-- Borders -->
+    <color name="border_subtle">#22252E</color>
+    <color name="border_medium">#2E3140</color>
+
+    <!-- Status -->
+    <color name="status_ok">#3DD68C</color>
+    <color name="status_error">#FF5C5C</color>
+    <color name="status_warn">#F5A623</color>
+</resources>

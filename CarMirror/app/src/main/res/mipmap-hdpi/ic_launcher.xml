@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#0D0E11"
+        android:pathData="M0,0 L108,0 L108,108 L0,108 Z" />
+    <!-- Screen/mirror icon -->
+    <path
+        android:fillColor="#4D9EFF"
+        android:pathData="M22,32 L86,32 Q90,32 90,36 L90,70 Q90,74 86,74 L22,74 Q18,74 18,70 L18,36 Q18,32 22,32 Z" />
+    <path
+        android:fillColor="#0D0E11"
+        android:pathData="M25,36 L83,36 L83,68 L25,68 Z" />
+    <path
+        android:fillColor="#4D9EFF"
+        android:pathData="M42,74 L66,74 L68,82 L40,82 Z" />
+    <path
+        android:fillColor="#3DD68C"
+        android:pathData="M34,82 L74,82 Q76,82 76,84 L76,86 Q76,88 74,88 L34,88 Q32,88 32,86 L32,84 Q32,82 34,82 Z" />
+</vector>

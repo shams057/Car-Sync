@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_primary">
+
+    <!-- Mirror surface -->
+    <SurfaceView
+        android:id="@+id/surfaceMirror"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Loading overlay -->
+    <LinearLayout
+        android:id="@+id/layoutLoading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@color/bg_primary"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:indeterminateTint="@color/accent_green" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Connecting to device..."
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:fontFamily="@font/display"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/tvSubStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Make sure the device is connected via USB"
+            android:textColor="@color/text_muted"
+            android:textSize="12sp"
+            android:fontFamily="@font/mono"
+            android:layout_marginTop="6dp"
+            android:letterSpacing="0.04" />
+
+    </LinearLayout>
+
+    <!-- HUD overlay (shown while mirroring) -->
+    <LinearLayout
+        android:id="@+id/layoutHud"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:background="@color/hud_bg"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvHudTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="● Android Mirror"
+            android:textColor="@color/accent_green"
+            android:textSize="12sp"
+            android:fontFamily="@font/mono" />
+
+        <TextView
+            android:id="@+id/tvHudFps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-- fps"
+            android:textColor="@color/text_muted"
+            android:textSize="12sp"
+            android:fontFamily="@font/mono"
+            android:layout_marginEnd="16dp" />
+
+        <TextView
+            android:id="@+id/btnDisconnect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="✕ disconnect"
+            android:textColor="@color/text_muted"
+            android:textSize="12sp"
+            android:fontFamily="@font/mono"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="4dp" />
+
+    </LinearLayout>
+
+    <!-- Connection selector bottom sheet -->
+    <LinearLayout
+        android:id="@+id/layoutConnectPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:background="@color/card_bg"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CONNECT ANDROID DEVICE"
+            android:textColor="@color/text_muted"
+            android:textSize="11sp"
+            android:letterSpacing="0.12"
+            android:fontFamily="@font/mono"
+            android:layout_marginBottom="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilIpInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Device IP  (e.g. 192.168.1.42)"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_marginEnd="12dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDeviceIp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textUri"
+                    android:fontFamily="@font/mono"
+                    android:textSize="14sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnConnectWifi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Connect WiFi"
+                android:layout_marginEnd="8dp"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnConnectUsb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Connect USB"
+                style="@style/Widget.MaterialComponents.Button" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvDeviceList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Scanning for devices on network..."
+            android:textColor="@color/text_muted"
+            android:textSize="11sp"
+            android:fontFamily="@font/mono"
+            android:layout_marginTop="10dp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

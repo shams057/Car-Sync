@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CarMirror</string>
+    <string name="btn_ios">iOS / iPadOS</string>
+    <string name="btn_android">Android</string>
+    <string name="connecting">Connecting…</string>
+    <string name="mirror_active">Mirroring active</string>
+    <string name="no_device">No device detected</string>
+    <string name="usb_required">Connect device via USB cable</string>
+    <string name="channel_name">CarMirror Service</string>
+    <string name="channel_desc">Keeps screen mirroring alive in background</string>
+    <string name="notif_title">CarMirror running</string>
+    <string name="notif_text">Screen mirror session active</string>
+</resources>
